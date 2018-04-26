@@ -1,6 +1,7 @@
 // Enemies Class [Players should not collide with this class objects]
 var Enemy = function(x,y) {
 // Variables applied to each instances of Enemy Class go here
+    'use strict'
     this.x=x;
     this.y=y;
     this.sprite = 'images/enemy-bug.png';
@@ -11,6 +12,7 @@ var Enemy = function(x,y) {
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
 //Multiplying by dt parameter wil ensure that the game runs at same speed for all computers
+    'use strict'
     this.start=-100;
     this.x+=this.randomSpeed*dt
     if(this.x>=510)
@@ -24,6 +26,7 @@ Enemy.prototype.update = function(dt) {
 //This method is called to check whether enemy object have collided with the player object or not.
 //Source : https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
 Enemy.prototype.collisionCheck = function() {
+    'use strict'
     var pBox = {x: player.x, y: player.y, width: 50, height: 40};
     var eBox = {x: this.x, y: this.y, width: 60, height: 70};
     if (pBox.x < eBox.x + eBox.width &&
@@ -37,11 +40,13 @@ Enemy.prototype.collisionCheck = function() {
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
+    'use strict'
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
 //Player Class
 var Player = function() {
+    'use strict'
     this.x=200;
     this.y=400;
     this.score=0;
@@ -51,11 +56,13 @@ var Player = function() {
 };
 //When the player collides with enemy and lives>0 then only position of the player is set to initial.
 Player.prototype.reset = function() {
+    'use strict'
     this.x=200;
     this.y=400;
 };
 //Resets all the properties when game is over,Stores the high score in the local storage and Display score and high score on the alert window 
 Player.prototype.gameOver = function() {
+    'use strict'
     if(localStorage.getItem('score')==null)
         localStorage.setItem("score", this.score);
     else
@@ -72,29 +79,34 @@ Player.prototype.gameOver = function() {
 };
 //Increments the score on reaching water by 100
 Player.prototype.scoreIncrement = function() {
+    'use strict'
     this.score+=100;
 };
 //Decrements Life by 1 and score by 10 when player is collided by the enemy
 Player.prototype.LifeDecrement = function() {
+    'use strict'
     this.score-=10
     this.lives--;
 };
 //If life is 0 at any instant then gameOver() function is called
 Player.prototype.update = function() {
+    'use strict'
     if(this.lives==0)
         this.gameOver();
 };
 //This method render the player image and score and lives of the player on the canvas
 Player.prototype.render = function() {
-ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-ctx.fillStyle ='white';
-ctx.font="16px Arial";
-ctx.fillText('Score : '+this.score,10,70);
-ctx.fillText('Lives : '+this.lives,420,70);
+    'use strict'
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.fillStyle ='white';
+    ctx.font="16px Arial";
+    ctx.fillText('Score : '+this.score,10,70);
+    ctx.fillText('Lives : '+this.lives,420,70);
 
 };
 //This method is used to make player move left,right,up and down when user click the specified key
 Player.prototype.handleInput = function(keypress) {
+    'use strict'
     switch(keypress){
         case 'left' :
             if(this.x>0)
@@ -133,6 +145,7 @@ var player = new Player();
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
+    'use strict'
     var allowedKeys = {
         37: 'left',
         38: 'up',
