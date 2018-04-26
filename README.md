@@ -13,6 +13,10 @@ In this game you have a Player and Enemies (Bugs). The goal of the player is to 
 	* After game completion (when no of lives are 0) GAME OVER Alert comes on the screen
 	* Game Over alert displayes score and high score of the player
 
+## Instructions to run the Game
+
+	* Open index.html file on your browser to run the game.
+
 ## Screenshot of the Game
 
 ![Game](screenshots/game.PNG)
