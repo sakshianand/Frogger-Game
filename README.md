@@ -17,10 +17,10 @@ In this game you have a Player and Enemies (Bugs). The goal of the player is to 
 ![Game](screenshots/game.PNG)
 
 ## Technologies Used
-	
-	* HTML Canvas
-	* CSS
-	* Object Oriented Javascript
+
+ * HTML5 Canvas
+ * CSS
+ * Object Oriented Javascript
 
 
 
