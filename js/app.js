@@ -1,3 +1,7 @@
+/*This file provides Enemy and Player Classes and their functionalities which is implemented throughout the game
+By: Sakshi Anand (25.04.2018)
+*/
+
 // Enemies Class [Players should not collide with this class objects]
 var Enemy = function(x,y) {
 // Variables applied to each instances of Enemy Class go here
