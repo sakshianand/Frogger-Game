@@ -1,6 +1,7 @@
 # Frogger
 
-This is a Classic Arcade Game build using HTML Canvas,CSS and Object Oriented Javascript
+This is a Classic Arcade Game build using HTML Canvas,CSS and Object Oriented Javascript.
+Check it [live](https://sakshianand.github.io/Frogger-Game/)
 
 ## How to Play
 
