@@ -14,8 +14,7 @@ In this game you have a Player and Enemies (Bugs). The goal of the player is to 
  * Game Over alert displayes score and high score of the player
 
 ## Instructions to run the Game
-
-	* Open index.html file on your browser to run the game.
+  * Open index.html file on your browser to run the game.
 
 ## Screenshot of the Game
 
